@@ -1,0 +1,5 @@
+.ipynb_checkpoints
+__pycache__
+com_sounds_nosed.pickle
+sample_rate2205_num_mfcc13_n_fft2048_hop_length512.pickle
+test.wav
