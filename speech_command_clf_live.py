@@ -8,7 +8,7 @@ from os import system
 
 SAMPLE_RATE = 22050  # Sample rate
 SECONDS = 1 # Duration of recording
-CHANNELS = 1 # Duration of recording
+CHANNELS = 1 # Channels
 
 class CommandRecorder(object):
     def __init__(self, sampleRate=SAMPLE_RATE, channels=CHANNELS):
@@ -22,7 +22,6 @@ class CommandRecorder(object):
         """
         samplesToRecord = int(recDuration * self.sampleRate)
         print('Recording sound!')
-        # winsound.Beep(1000, 500)  # Beep at 1000 Hz for 100 ms
         rec = sd.rec(samplesToRecord, samplerate=self.sampleRate, channels=self.channels)
         sd.wait()
         return rec[:,0]
@@ -46,6 +45,3 @@ if __name__ == "__main__":
     cr = CommandRecorder()
     while True:
         key_handler()
-            # break  # if user pressed a key other than the given key the loop will break
-
-            
